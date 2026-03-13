@@ -5,7 +5,7 @@
 **Version:** 1.0
 **Repository:** https://github.com/pragnakar/Security_Engineering
 **Parent Meta-Prompt:** LLM-Native Software Engineering — https://github.com/pragnakar/LLM_NATIVE_SOFTWARE_ENGINEERING
-**Companion Meta-Prompts:** Deployment Engineering, DevOps, Database, API Design, Testing Strategy
+**Companion Meta-Prompts:** Deployment Engineering, DevOps, Database, UI-UX, MLOps, API Design, Testing Strategy, Documentation, Scrum
 
 ---
 
@@ -181,6 +181,12 @@ When an LLM coding agent is operating under this meta-prompt:
 - **Testing Strategy:** Security testing (SAST, DAST, SCA, penetration testing) is coordinated with the Testing Strategy meta-prompt's overall test plan. Security test results feed into the same verification pipeline defined by Testing Strategy.
 
 - **Documentation:** Security architecture decisions, threat models, and compliance mappings are documented following the Documentation meta-prompt's standards. Security runbooks follow the operational documentation patterns defined there.
+
+- **UI-UX:** UI components handling authentication, authorization, and sensitive data require security review. This meta-prompt defines security requirements for forms (CSRF tokens, input validation), session management (cookie attributes), and output encoding; UI-UX implements those requirements in component design. Content Security Policy headers restrict what frontend code can load and execute.
+
+- **MLOps:** ML systems introduce unique security concerns: model artifact integrity, training data access controls, adversarial input robustness, and PII handling in prediction logs. This meta-prompt defines the threat model for ML pipelines; MLOps implements the operational controls.
+
+- **Scrum:** Security requirements are non-negotiable backlog items, not optional enhancements. Threat modeling sessions occur during sprint planning for features that introduce new attack surface. Security findings from SAST/DAST generate backlog items with priority determined by severity. Definition of Done for any feature touching authentication, data storage, or external APIs includes a security checklist review.
 
 ## Anti-Patterns
 
